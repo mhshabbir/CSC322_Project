@@ -1,20 +1,17 @@
-.navbar{
-    width: 100%;
+
+.Nav{
+    background: rgba(72, 109, 240, 0.9);
     height: 100px;
-    background-color: #486DF0;
+  }
+  
+  .Logo{
+    position: fixed;
+    padding-left: 30px;
+  }
+  
+  
+  .search{
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
-
-.links {
-    margin-right: 50px;
-    display: flex;
-    align-items: center;
-}
-
-.links a {
-    text-decoration: none;
-    color: white;
-    margin-left: 20px;
-}
+    flex-direction: row
+  
+  }
