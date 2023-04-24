@@ -6,7 +6,7 @@ import { Shop } from "./pages/shop/shop";
 
 function App() {
   return (
-    <div className="wrapper">
+    <div className="App">
       <h1>
         <Navbar/>
         <Routes>
