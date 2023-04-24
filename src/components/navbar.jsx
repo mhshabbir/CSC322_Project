@@ -9,14 +9,13 @@ export default function Navbar(){
   <div className="Nav">
   <h1 className='Logo'>PC PALACE</h1>  
   <div className='search'>
-  <Box display='flex' 
-component="form"
+  <Box position="relative" display='flex' 
 sx={{
   '& > :not(style)': { m: 2, width: '50ch', ml:30},
 }}
 >
-<TextField id="outlined-basic" label="Search" variant="outlined" style={{ backgroundColor: 'white', color: 'black' }} />
-<Button variant="contained" size="medium" style={{ backgroundColor: 'black', color: 'white' }}> Login</Button>
+<TextField  label="Search" variant="outlined" style={{ backgroundColor: 'white', color: 'black', borderRadius: '30px' }} />
+<Button variant="contained" size="medium" style={{ backgroundColor: 'black', color: 'white' , width:'200px',  borderRadius: '30px'}}> Login</Button>
 
 
 </Box>
