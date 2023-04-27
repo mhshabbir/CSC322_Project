@@ -18,3 +18,17 @@ import Button from '@mui/material/Button';
     </div>
   </div>)
 }
+
+export function NavbarNoButton(){
+  return (
+  <div className="Nav">
+    <h1 className='Logo'>PC PALACE</h1>  
+    <div className='search'>
+      <Box position="relative" display='flex' sx={{
+      '& > :not(style)': { m: 2, width: '50ch', ml:30},
+      }}>
+        <TextField  label="Search" variant="outlined" style={{ backgroundColor: 'white', color: 'black', borderRadius: '30px' }} />
+      </Box>
+    </div>
+  </div>)
+}

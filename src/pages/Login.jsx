@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { Button, TextField } from "@mui/material";
+import { NavbarNoButton } from "../components/Navbar";
 
 export default function Login() {
     const [email, setEmail] = useState('');
@@ -11,15 +13,32 @@ export default function Login() {
 
     return (
         <div>
+            <NavbarNoButton />
             <form onSubmit={handleSubmit}>
-                <label for="email">email</label>
-                <input value={email} onChange={(e) => setEmail(e.target.value)} type="email" placeholder="youremail@gmail.com" id="email" name="email"/>
+                <TextField
+                    required
+                    id="email-field"
+                    label="Email"
+                    defaultValue="example@domain.com"
+                    margin="normal"
+                />
 
-                <label for="password">password</label>
-                <input value={pass} onChange={(e) => setPass(e.target.value)} type="password" placeholder="********" id="password" name="password"/>
-                <button type="submit">Login</button>
+                <TextField
+                    required
+                    id="password-field"
+                    label="Password"
+                    defaultValue="********"
+                    margin="normal"
+                />
+
             </form>
-            <button>Don't have an account? Sign-up here</button>
+            <div>
+                <Button variant="contained" href="/Login" size="medium" style={{ backgroundColor: 'black', color: 'white' , width:'200px',  borderRadius: '30px'}}> Login</Button>
+            </div>
+            
+            <label>Don't have an account? Sign-up here</label>
+            <Button variant="contained" href="/SignUp" size="medium" style={{ backgroundColor: 'black', color: 'white' , width:'200px',  borderRadius: '30px'}}> Sign Up</Button>
+            
         </div>    
     )
 }
