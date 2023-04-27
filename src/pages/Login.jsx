@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export const Login = () => {
+export default function Login() {
     const [email, setEmail] = useState('');
     const [pass, setPass] = useState('');
 
@@ -10,7 +10,7 @@ export const Login = () => {
     }
 
     return (
-        <>
+        <div>
             <form onSubmit={handleSubmit}>
                 <label for="email">email</label>
                 <input value={email} onChange={(e) => setEmail(e.target.value)} type="email" placeholder="youremail@gmail.com" id="email" name="email"/>
@@ -20,6 +20,6 @@ export const Login = () => {
                 <button type="submit">Login</button>
             </form>
             <button>Don't have an account? Sign-up here</button>
-        </>
+        </div>    
     )
 }

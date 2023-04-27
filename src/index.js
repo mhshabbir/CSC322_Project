@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './index.css';
 import App from './App';
-import Login from './pages/LoginPage';
+import Login from './pages/Login';
 import SignUp from './pages/SignUp';
 import Cart from './pages/ShoppingCart';
 import reportWebVitals from './reportWebVitals';
@@ -17,7 +17,7 @@ root.render(
    <Routes>
     <Route path="/" element={<App/>} />
     <Route path="SearchResults" element={<Search/>}/>
-    <Route path="LoginPage" element={<Login/>}/>
+    <Route path="Login" element={<Login/>}/>
     <Route path="SignUpPage" element={<SignUp/>}/>
     <Route path="ShoppingCart" element={<Cart/>}/>
     <Route path="CheckoutPage" element={<Checkout/>}/>
