@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Button, TextField } from "@mui/material";
-import { NavbarNoButton } from "../components/Navbar";
+//import { NavbarNoButton } from "../components/avbar";
 
 export default function Login() {
     const [email, setEmail] = useState('');
@@ -13,7 +13,7 @@ export default function Login() {
 
     return (
         <div>
-            <NavbarNoButton />
+            
             <form onSubmit={handleSubmit}>
                 <TextField
                     required
