@@ -5,10 +5,12 @@ import './index.css';
 import App from './App';
 import Login from './pages/LoginPage';
 import SignUp from './pages/SignUp';
-import Cart from './pages/ShoppingCart';
+// import Cart from './pages/ShoppingCart';
 import reportWebVitals from './reportWebVitals';
 import Search from './pages/SearchResults';
 import Checkout from './pages/CheckoutPage';
+import {Cart} from './pages/cart/cart';
+import { Shop } from "./pages/shop/shop";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -19,8 +21,10 @@ root.render(
     <Route path="SearchResults" element={<Search/>}/>
     <Route path="LoginPage" element={<Login/>}/>
     <Route path="SignUpPage" element={<SignUp/>}/>
-    <Route path="ShoppingCart" element={<Cart/>}/>
+    {/* <Route path="ShoppingCart" element={<Cart/>}/> */}
     <Route path="CheckoutPage" element={<Checkout/>}/>
+    <Route path='shop' element={<Shop/>} />
+    <Route path='cart' element={<Cart/>} />
    </Routes>
    </BrowserRouter>
   </React.StrictMode>
