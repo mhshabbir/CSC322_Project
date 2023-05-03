@@ -3,13 +3,13 @@ import { PRODUCTS } from "../../products";
 import { Product } from "./product";
 import Navbar from '../../components/navbar';
 import "./shop.css";
-import "../../App.css"
+import "../../App.css";
 
 export const Shop = () => {
   return (
+
     <div className='shop'>
         <div className='shopTitle'>
-            <Navbar/>
             <h1>PC Palace</h1>
         </div>
         <div>
