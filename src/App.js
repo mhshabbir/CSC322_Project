@@ -1,8 +1,9 @@
 
 import './App.css';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Navbar } from "./components/Navbar";
-import { Cart } from './pages/cart/cart';
+// import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './components/navbar';
+import {Cart} from './pages/cart/cart';
+
 import { Shop } from "./pages/shop/shop";
 import { ShopContextProvider } from "./context/shop-context";
 import Login from './pages/Login';
@@ -11,7 +12,6 @@ import Login from './pages/Login';
 function App() {
   return (
     <div className="App">
-
       <ShopContextProvider>
         <Router>  
           <Navbar />

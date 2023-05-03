@@ -10,7 +10,6 @@ export const Shop = () => {
 
     <div className='shop'>
         <div className='shopTitle'>
-       
             <h1>PC Palace</h1>
         </div>
         <div>
