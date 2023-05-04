@@ -9,7 +9,7 @@ import {    createTheme,
             Container, 
             Typography,
         } from "@mui/material";
-import { NavbarNoButton } from '../components/Navbar';
+import { NavbarNoButton } from '../../components/navbar';
 
 const theme = createTheme();
 theme.spacing(2);

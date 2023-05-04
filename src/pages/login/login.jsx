@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { createTheme, ThemeProvider, Link, Grid, Box, Button, TextField, Container, Typography, FormControl, InputLabel, MenuItem, Select } from "@mui/material";
-import { NavbarNoButton } from "../components/Navbar";
+import { NavbarNoButton } from "../../components/navbar";
 
 
 const theme = createTheme();
 
-export default function Login() {
+export const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [account, setAccount] = useState('');
@@ -21,7 +21,6 @@ export default function Login() {
 
     return (
         <ThemeProvider theme={theme}>
-            <NavbarNoButton />
             <Container component="main" maxWidth="xs">
                 <Box 
                     sx={{
@@ -109,5 +108,5 @@ export default function Login() {
             </Container>
         </ThemeProvider>
              
-    );
+    )
 }
