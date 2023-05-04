@@ -1,5 +1,14 @@
 import React, {useState} from 'react';
-import { createTheme, ThemeProvider, Link, Grid, Box, Button, TextField, Container, Typography } from "@mui/material";
+import {    createTheme, 
+            ThemeProvider, 
+            Link, 
+            Grid, 
+            Box, 
+            Button, 
+            TextField, 
+            Container, 
+            Typography,
+        } from "@mui/material";
 import { NavbarNoButton } from '../components/Navbar';
 
 const theme = createTheme();
@@ -7,11 +16,13 @@ theme.spacing(2);
 
 export default function SignUp(){
     const [email, setEmail] = useState('');
-    const [pass, setPass] = useState('');
+    const [password, setPassword] = useState('');
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(email);
+        setEmail(e.target.value);
+        setPassword(e.target.value);
+        console.log(email, password);
     }
 
     return(
@@ -57,7 +68,6 @@ export default function SignUp(){
                         label="Email"
                         id="email-field"
                         placeholder="example@domain.com"
-                        autoFocus
                     />
 
                     <TextField
@@ -68,6 +78,7 @@ export default function SignUp(){
                         type="password"
                         id="password-field"
                         placeholder="********" 
+                        
                     />
 
                     <TextField
@@ -83,7 +94,7 @@ export default function SignUp(){
                     <Button
                         type="submit"
                         variant="contained" 
-                        href="/Login" 
+                        href="/SignUp" 
                         size="medium" 
                         style={{ 
                             backgroundColor: 'black', 

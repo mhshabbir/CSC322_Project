@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { createTheme, ThemeProvider, Link, Grid, Box, Button, TextField, Container, Typography } from "@mui/material";
+import { createTheme, ThemeProvider, Link, Grid, Box, Button, TextField, Container, Typography, FormControl, InputLabel, MenuItem, Select } from "@mui/material";
 import { NavbarNoButton } from "../components/Navbar";
 
 const theme = createTheme();
@@ -7,10 +7,15 @@ const theme = createTheme();
 export default function Login() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [account, setAccount] = useState('');
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(email, password);
+        console.log(email, password, account);
+    }
+
+    const handleChange = (e) => {
+        setAccount(e.target.value);
     }
 
     return (
@@ -28,7 +33,7 @@ export default function Login() {
                 >
 
                     <Typography component="h1" variant="h5">
-                        Sign in
+                        Login
                     </Typography>
 
                     <Box component="form" 
@@ -60,6 +65,21 @@ export default function Login() {
                             placeholder="********" 
                         />
 
+                        <FormControl fullWidth>
+                            <InputLabel id="account-type">Select Account Type</InputLabel>
+                            <Select
+                                labelId="account-type-label"
+                                id="account-type-select"
+                                value={account}
+                                label="Select Account Type"
+                                onChange={handleChange}
+                            >
+                                <MenuItem value={"Owner"}>Owner</MenuItem>
+                                <MenuItem value={"Employee"}>Employee</MenuItem>
+                                <MenuItem value={"Customer"}>Customer</MenuItem>
+                            </Select>
+                        </FormControl>
+
                         <Button
                             type="submit"
                             variant="contained" 
@@ -74,7 +94,7 @@ export default function Login() {
                         > 
                             Login
                         </Button>
-
+            
                         <Grid container>
                             <Grid item>
                                 <Link href="/SignUp" variant="body2">

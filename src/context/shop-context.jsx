@@ -12,8 +12,8 @@ const getDefaultCart = () => {
     }
 }
 
-export const ShpoContextProvider = (props) => {
+export const ShopContextProvider = (props) => {
     const [cartItems,setCartItems] = useState();
-    return <ShpoContext.Provider>{props.children}</ShpoContext.Provider>;
+    return <ShopContext.Provider>{props.children}</ShopContext.Provider>;
   };
 
