@@ -9,6 +9,8 @@ export const PRODUCTS = [
     price: 999.0,
     productImage: product1,
     category: "Phone",
+    reviews: "Great product ID 1",
+    productlink: "product1",
   },
   {
     id: 2,
@@ -16,6 +18,8 @@ export const PRODUCTS = [
     price: 1999.0,
     productImage: product2,
     category: "laptop",
+    reviews: "Great product id 2",
+    productlink: "product2",
   },
   {
     id: 3,
@@ -23,5 +27,7 @@ export const PRODUCTS = [
     price: 699.0,
     productImage: product3,
     category: "camera",
+    reviews: "Good Product ID 3",
+    productlink: "product3",
   },
 ];

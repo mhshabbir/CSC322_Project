@@ -1,15 +1,18 @@
 import React, { useContext } from 'react'
 import { ShopContext } from "../../context/shop-context";
+import { Link } from "react-router-dom";
 
 export const Product = (props) => {
-  const { id, productName, price, productImage} = props.data;
+  const { id, productName, price, productImage, productlink} = props.data;
   const {addToCart} = useContext(ShopContext);
   const {cartItems} = useContext(ShopContext);
   const cartItemAmount = cartItems[id];
   
   return (
     <div className="product">
-      <img src={productImage} alt="" />
+      <Link to={productlink}>
+        <img src={productImage} alt="" />
+      </Link>
       <div className='description'>
         <p>
           <b>{productName}</b>
