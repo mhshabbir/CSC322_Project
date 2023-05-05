@@ -9,6 +9,7 @@ import Login from './pages/Login';
 import { Viewproduct } from "./pages/viewProductPages/viewproduct";
 
 
+
 function App() {
   return (
     <div className="App">
@@ -24,7 +25,6 @@ function App() {
           </Routes>
         </Router>
       </ShopContextProvider>
-
     </div>
   );
 }
