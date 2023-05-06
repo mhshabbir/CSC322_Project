@@ -1,0 +1,48 @@
+body {
+    background-color: #fdf1ec;
+  }
+
+  .wrapper {
+    height: 420px;
+    width: 654px;
+    margin: 50px auto;
+    border-radius: 7px 7px 7px 7px;
+    /* VIA CSS MATIC https://goo.gl/cIbnS */
+    -webkit-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+  }
+
+
+  .product-img {
+    float: left;
+    height: 420px;
+    width: 327px;
+    background-color: white;
+    
+  }
+  
+  .product-img img {
+    object-fit: contain;
+    border-radius: 7px 0 0 7px;
+  }
+
+  .description {
+    float: left;
+    height: 420px;
+    width: 327px;
+    border-radius: 0 7px 10px 7px;
+    
+  }
+
+.description p,b {
+    margin: 10px;
+}
+   
+  span {
+    display: inline-block;
+    height: 50px;
+    font-family: 'Suranna', serif;
+    font-size: 34px;
+    
+  }

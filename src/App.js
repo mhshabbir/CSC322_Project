@@ -4,8 +4,8 @@ import { Navbar } from "./components/navbar";
 import { Cart } from './pages/cart/cart';
 import { Shop } from "./pages/shop/shop";
 import { ShopContextProvider } from "./context/shop-context";
-import { Build } from "./pages/build/build"
-import Login from './pages/Login';
+import { Build } from "./pages/build/build";
+import { Login } from './pages/login/login';
 import { Viewproduct } from "./pages/viewProductPages/viewproduct";
 
 
@@ -21,7 +21,7 @@ function App() {
             <Route path="/" element={<Shop />} />
             <Route path="cart" element={<Cart />} />
             <Route path='pages/Login' element={<Login/>} />
-            <Route path='/:productlink' element={<Viewproduct/>}/>  
+            <Route path='product/:productlink' element={<Viewproduct/>}/>  
           </Routes>
         </Router>
       </ShopContextProvider>
