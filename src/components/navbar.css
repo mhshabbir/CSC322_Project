@@ -42,23 +42,34 @@
 
 
  .navbar {
+  margin: 0;
   width: 100%;
-  height: 80px;
-  background-color: rgb(19, 19, 19);
+  height: 100px;
+  background-color: #486DF0;
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
 
 .links {
-  margin-right: 50px;
-  display: flex;
+  margin-right: 20px;
+  /* display: flex; */
   align-items: center;
+  margin-left: 20px;
 }
 
-.links a {
+.center-link a {
   text-decoration: none;
   color: white;
   margin-left: 20px;
+  margin-right: 20px;
+  
   font-size: 25px;
+}
+
+.links a {
+  color: white;
+  margin-left: 20px;
+  margin-right: 20px;
+  justify-content: flex-end; 
 }

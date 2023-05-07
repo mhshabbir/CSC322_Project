@@ -6,7 +6,6 @@ export const Login = () => {
     const [password, setPassword] = useState("");
     const [account, setAccount] = useState("");
 
-
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log(email, password, account);
@@ -64,7 +63,7 @@ export const Login = () => {
                     />
 
                     <FormControl fullWidth>
-                        <InputLabel id="account-type">Select Account Type</InputLabel>
+                        <InputLabel id="account-type-label">Select Account Type</InputLabel>
                         <Select
                             labelId="account-type-label"
                             id="account-type-select"
@@ -77,31 +76,27 @@ export const Login = () => {
                             <MenuItem value={"Customer"}>Customer</MenuItem>
                         </Select>
                     </FormControl>
-                        <Button
-                            type="submit"
-                            variant="contained" 
-                            href="/Login" 
-                            size="medium" 
-                            style={{ 
-                                backgroundColor: 'black', 
-                                color: 'white' , 
-                                width:'200px',  
-                                borderRadius: '30px'
-                            }}
-                        > 
-                            Login
-                        </Button>
-    
-                        <Grid container>
-                            <Grid item>
-                                <Link href="/SignUp" variant="body2">
-                                    {"Don't have an account? Sign-up"}
-                                </Link>
-                            </Grid>
+                    <Button
+                        type="submit"
+                        variant="contained" 
+                        size="medium" 
+                        style={{ 
+                            backgroundColor: 'black', 
+                            color: 'white' , 
+                            width:'200px',  
+                            borderRadius: '30px'
+                        }}
+                    > 
+                        Login
+                    </Button>
 
+                    <Grid container>
+                        <Grid item>
+                            <Link href="/SignUp" variant="body2">
+                                {"Don't have an account? Sign-up"}
+                            </Link>
                         </Grid>
                     </Grid>
-
                 </Box>
             </Box> 
         </Container>

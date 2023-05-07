@@ -4,6 +4,7 @@ import { Product } from "./product";
 import Navbar from '../../components/navbar';
 import "./shop.css";
 import "../../App.css";
+import Avatar from '../../Chatbox/avatar';
 
 export const Shop = () => {
   return (
@@ -13,10 +14,15 @@ export const Shop = () => {
             <h1>PC Palace</h1>
         </div>
         <div>
+           
             <div className="products">
                 {PRODUCTS.map((product) => (
                     <Product data = {product} /> 
                 ))}
+                
+            </div>
+            <div>
+                <Avatar></Avatar>
             </div>
         </div>
     </div>
