@@ -77,27 +77,28 @@ export const Login = () => {
                             <MenuItem value={"Customer"}>Customer</MenuItem>
                         </Select>
                     </FormControl>
+                        <Button
+                            type="submit"
+                            variant="contained" 
+                            href="/Login" 
+                            size="medium" 
+                            style={{ 
+                                backgroundColor: 'black', 
+                                color: 'white' , 
+                                width:'200px',  
+                                borderRadius: '30px'
+                            }}
+                        > 
+                            Login
+                        </Button>
+    
+                        <Grid container>
+                            <Grid item>
+                                <Link href="/SignUp" variant="body2">
+                                    {"Don't have an account? Sign-up"}
+                                </Link>
+                            </Grid>
 
-                    <Button
-                        type="submit"
-                        variant="contained" 
-                        href="./login" 
-                        size="medium" 
-                        style={{ 
-                            backgroundColor: 'black', 
-                            color: 'white' , 
-                            width:'200px',  
-                            borderRadius: '30px'
-                        }}
-                    > 
-                        Login
-                    </Button>
-        
-                    <Grid container>
-                        <Grid item>
-                            <Link href="/signup" variant="body2">
-                                {"Don't have an account? Sign-up"}
-                            </Link>
                         </Grid>
                     </Grid>
 

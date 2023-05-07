@@ -1,0 +1,22 @@
+.build-page{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+
+.buildPage-wrap{
+    display: flex;
+    flex: 1;
+    
+}
+
+.filtering-side-panel{
+    flex-basis:280px;
+    
+
+}
+
+.products-view-build-page{
+    flex: 1;
+}
