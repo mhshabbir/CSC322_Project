@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import { ShopContext } from '../../context/shop-context';
 import { Button, Box, Paper, TextField, Typography } from '@mui/material';
 
+
 export const DisplayProduct = (props) => {
 const {id, productName, price, productImage, reviews} = props.data;
 const {addToCart} = useContext(ShopContext);
@@ -10,55 +11,56 @@ const cartItemAmount = cartItems[id];
 
 
   return (
-    <div className="showProduct">
-      <img src={productImage} alt="" />
+    <div className="product-listing">
+      <div className="product-img">
+        <img src={productImage} alt="" height="420" width="327"/>
+      </div>
       <div className='description'>
-        <p>
+        <h1>
           <b>{productName}</b>
-        </p>
-        <p>${price}</p>
+        </h1>
+        <p><span>${price}</span></p>
         <button className='addToCartBttn' onClick={()=> addToCart(id)}>
           Add To Cart {cartItemAmount > 0 && <> ({cartItemAmount})</>}
         </button>
       </div>
 	
-	<Box textAlign='center' sx={{ 	width: 2/3 }}>
-		<Paper elevation={1} sx={{ p: 2}}>
-			<Typography align='center'>
-				Post Comment:
-			</Typography>
+      <Box textAlign='center' sx={{ 	width: 2/3 }}>
+        <Paper elevation={1} sx={{ p: 2}}>
+          <Typography align='center'>
+            Post Comment:
+          </Typography>
 
-			<TextField multiline fullWidth />
-			
-			<Button
-				type="submit"
-				variant="contained"
-				size="medium"
-				style={{ 
-					backgroundColor: 'black', 
-					color: 'white' , 
-					width:'200px',  
-					borderRadius: '30px'
-				}}
-			> 
-				Submit
-			</Button>
-			
-		</Paper>
+          <TextField multiline fullWidth />
 
-		<br/>
+          <Button
+            type="submit"
+            variant="contained"
+            size="medium"
+            style={{ 
+              backgroundColor: 'black', 
+              color: 'white' , 
+              width:'200px',  
+              borderRadius: '30px'
+            }}
+          > 
+            Submit
+          </Button>
 
-		<Paper elevation={1}>
-			<Typography>
-				USERNAME
-			</Typography>
+        </Paper>
 
-			<Typography>
-			{reviews}
-			</Typography>
-		</Paper>
-	</Box>
-	  
+        <br/>
+
+        <Paper elevation={1}>
+          <Typography>
+            USERNAME
+          </Typography>
+
+          <Typography>
+          {reviews}
+          </Typography>
+        </Paper>
+      </Box>
     </div>
   )
 }

@@ -24,7 +24,6 @@ function App() {
             <Route path='pages/login' element={<Login/>} />
             <Route path='pages/signup' element={<SignUp/>} />
             <Route path='/:productlink' element={<Viewproduct/>}/>  
-
           </Routes>
         </Router>
       </ShopContextProvider>
