@@ -5,7 +5,8 @@ import { Cart } from './pages/cart/cart';
 import { Shop } from "./pages/shop/shop";
 import { ShopContextProvider } from "./context/shop-context";
 import { Build } from "./pages/build/build";
-import { Login } from './pages/login/login';
+import { Login } from "./pages/login/login";
+import { SignUp } from "./pages/signup/signup";
 import { Viewproduct } from "./pages/viewProductPages/viewproduct";
 
 
@@ -20,8 +21,9 @@ function App() {
             <Route path='build' element={<Build/>}/>
             <Route path="/" element={<Shop />} />
             <Route path="cart" element={<Cart />} />
-            <Route path='pages/Login' element={<Login/>} />
-            <Route path='product/:productlink' element={<Viewproduct/>}/>  
+            <Route path='pages/login' element={<Login/>} />
+            <Route path='pages/signup' element={<SignUp/>} />
+            <Route path='/:productlink' element={<Viewproduct/>}/>  
           </Routes>
         </Router>
       </ShopContextProvider>

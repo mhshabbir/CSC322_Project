@@ -1,7 +1,5 @@
 import React, {useState} from 'react';
-import {    createTheme, 
-            ThemeProvider, 
-            Link, 
+import {    Link, 
             Grid, 
             Box, 
             Button, 
@@ -9,12 +7,8 @@ import {    createTheme,
             Container, 
             Typography,
         } from "@mui/material";
-import { NavbarNoButton } from '../../components/navbar';
 
-const theme = createTheme();
-theme.spacing(2);
-
-export default function SignUp(){
+export const SignUp = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
@@ -26,8 +20,6 @@ export default function SignUp(){
     }
 
     return(
-        <ThemeProvider theme={theme}>
-        <NavbarNoButton />
         <Container component="main" maxWidth="xs">
             <Box 
                 sx={{
@@ -117,6 +109,5 @@ export default function SignUp(){
                 </Box>
             </Box> 
         </Container>
-    </ThemeProvider>
     );
 }
