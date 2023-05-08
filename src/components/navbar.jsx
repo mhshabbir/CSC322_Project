@@ -7,14 +7,17 @@ import "./navbar.css";
 
 export const Navbar = () => {
   return (
+    
     <div className="navbar">
       <div className="center-link">
         <Link to="/">
           Home
         </Link>
+        
         <Link to="/build">
           Build
         </Link>
+      
       </div>
       <div className="links">
         <Link to="/cart">

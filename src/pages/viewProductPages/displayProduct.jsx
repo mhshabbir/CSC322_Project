@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import { ShopContext } from '../../context/shop-context';
-import { Button, Box, Paper, TextField, Typography } from '@mui/material';
+import { Stack, Button, Box, Paper, TextField, Typography, Container } from '@mui/material';
+
 
 
 export const DisplayProduct = (props) => {
@@ -9,58 +10,75 @@ const {addToCart} = useContext(ShopContext);
 const {cartItems} = useContext(ShopContext);
 const cartItemAmount = cartItems[id];
 
+const DisplayComments = () => {
+	const comments = [];
+	for (let i = 0; i < reviews.length; i++) {
+		comments.push(	<Paper elevation={1} sx={{ p: 2}}>
+							<Typography>
+								USERNAME
+							</Typography>
 
-  return (
-    <div className="product-listing">
-      <div className="product-img">
-        <img src={productImage} alt="" height="420" width="327"/>
-      </div>
-      <div className='description'>
-        <h1>
-          <b>{productName}</b>
-        </h1>
-        <p><span>${price}</span></p>
-        <button className='addToCartBttn' onClick={()=> addToCart(id)}>
-          Add To Cart {cartItemAmount > 0 && <> ({cartItemAmount})</>}
-        </button>
-      </div>
+							<Typography>
+								{reviews[i]}
+							</Typography>
+						</Paper>);
+	}
+	return (<Stack spacing={1}> {comments} </Stack>);
+}
+
+return (
+	<Container component="main" sx={{ width: 700, height: 200, mb: 4 }}>
+		<Box textAlign="center">
+			<Box textAlign='center' sx={{ p: 2, border: 2, mb: 5 }}>
+				<img src={productImage} alt="" height="420" width="327"/>
+
+				<Typography>
+					{productName}
+				</Typography>
+		
+				
+				<Button style={{ 
+						backgroundColor: 'black', 
+						color: 'white' , 
+						width:'200px',  
+						borderRadius: '30px'
+						}}
+						className='addToCartBttn' 
+						onClick={()=> addToCart(id)}
+				>
+					Add To Cart {cartItemAmount > 0 && <> ({cartItemAmount})</>}
+				</Button>
+			</Box>
 	
-      <Box textAlign='center' sx={{ 	width: 2/3 }}>
-        <Paper elevation={1} sx={{ p: 2}}>
-          <Typography align='center'>
-            Post Comment:
-          </Typography>
 
-          <TextField multiline fullWidth />
+			<Stack spacing={2}>
+				<Paper elevation={1} sx={{ p: 3 }}>
+					<Typography>
+						Leave a comment:
+					</Typography>
 
-          <Button
-            type="submit"
-            variant="contained"
-            size="medium"
-            style={{ 
-              backgroundColor: 'black', 
-              color: 'white' , 
-              width:'200px',  
-              borderRadius: '30px'
-            }}
-          > 
-            Submit
-          </Button>
+					<TextField rows="3" multiline fullWidth sx={{ pb: 2 }} />
+					
+					<Button
+						type="submit"
+						variant="contained"
+						size="medium"
+						style={{ 
+							backgroundColor: 'black', 
+							color: 'white' , 
+							width:'200px',  
+							borderRadius: '30px'
+						}}
+					> 
+						Submit
+					</Button>
+				</Paper>
 
-        </Paper>
-
-        <br/>
-
-        <Paper elevation={1}>
-          <Typography>
-            USERNAME
-          </Typography>
-
-          <Typography>
-          {reviews}
-          </Typography>
-        </Paper>
-      </Box>
-    </div>
-  )
+				<DisplayComments />
+			</Stack>
+				
+		</Box>
+	</Container>
+		
+ 	)
 }
