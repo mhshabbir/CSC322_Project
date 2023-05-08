@@ -9,7 +9,7 @@ export const Product = (props) => {
   const cartItemAmount = cartItems[id];
   
   return (
-    <div className="product">
+    <div className="product" >
       <Link to={productlink}>
         <img src={productImage} alt="" />
       </Link>

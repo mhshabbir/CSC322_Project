@@ -100,7 +100,6 @@ export const Login = () => {
                             </Grid>
 
                         </Grid>
-                    </Grid>
 
                 </Box>
             </Box> 
