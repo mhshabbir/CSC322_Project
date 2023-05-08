@@ -7,21 +7,18 @@ import "./viewproduct.css";
 
 
 export const Viewproduct = () => {
-  const {IDTest} = useParams()
-  const viewProductID = "/product/product2";
- 
-  console.log(IDTest)
-  
+  const {productlinkID} = useParams()
+  const viewProductURL = "/product/" + productlinkID
 
   return (
     <div className='individual-shop-card'>
       <div className='shop_page'>
-          <h1>Product Page</h1>
+          <h1>Product Page </h1>
       </div>
       <div>
           <div className="wrapper">
               {PRODUCTS.map((product) => (
-                product.productlink === viewProductID ? ( 
+                product.productlink === viewProductURL ? ( 
                   <DisplayProduct key = {product.productlink} data = {product} />
                 ) : (
                   <React.Fragment key={product.productlink}></React.Fragment>
