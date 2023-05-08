@@ -22,8 +22,9 @@ function App() {
             <Route path="/" element={<Shop />} />
             <Route path="cart" element={<Cart />} />
             <Route path='pages/login' element={<Login/>} />
-            <Route path='pages/signup' element={<SignUp/>} />
-            <Route path='/:productlink' element={<Viewproduct/>}/>  
+            <Route path='signup' element={<SignUp/>} />
+            <Route path='/product/:productlinkID' element={<Viewproduct/>}/> 
+            
           </Routes>
         </Router>
       </ShopContextProvider>
