@@ -96,6 +96,7 @@ export const Login = () => {
                                 {"Don't have an account? Sign-up"}
                             </Link>
                         </Grid>
+                    </Grid>
                 </Box>
             </Box> 
         </Container>

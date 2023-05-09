@@ -18,7 +18,7 @@ export const PRODUCTS = [
     price: 1999.0,
     productImage: product2,
     category: "laptop",
-    reviews: ["Great product id 2","jasdklfjklsajdflkj","sdjaflkjlkjlkjasdlkjlkjsdf"],
+    reviews: ["Great product id 2","fuck","sdjaflkjlkjlkjasdlkjlkjsdf"],
     productlink: "/product/product2",
   },
   {
