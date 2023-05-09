@@ -8,19 +8,36 @@ const {addToCart} = useContext(ShopContext);
 const {cartItems} = useContext(ShopContext);
 const cartItemAmount = cartItems[id];
 
-const DisplayComments = () => {
+const RenderComments = (filtered) => {
 	const comments = [];
-	for (let i = 0; i < reviews.length; i++) {
-		comments.push(	<Paper elevation={1} sx={{ p: 2}}>
+	
+
+	for (let i = 0; i < filtered.length; i++) {
+		comments.push(	<Paper elevation={1} sx={{ p: 2 }}>
 							<Typography>
 								USERNAME
 							</Typography>
 
 							<Typography>
-								{reviews[i]}
+								{filtered[i]}
 							</Typography>
 						</Paper>);
 	}
+	return comments;
+}
+
+const CensorComments = (comments) => {
+	const filteredComments = [];
+	const Filter = require('bad-words');
+	var filter = new Filter();
+	reviews.forEach(element => {
+		filteredComments.push(filter.clean(element));
+	});
+	return filteredComments;
+}
+
+const DisplayComments = () => {
+	var comments = RenderComments(CensorComments())
 	return (<Stack spacing={1}> {comments} </Stack>);
 }
 
