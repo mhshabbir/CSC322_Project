@@ -1,7 +1,6 @@
 import React from 'react';
 import { PRODUCTS } from "../../products";
 import { Product } from "./product";
-import Navbar from '../../components/navbar';
 import "./shop.css";
 import "../../App.css";
 import Avatar from '../../Chatbox/avatar';

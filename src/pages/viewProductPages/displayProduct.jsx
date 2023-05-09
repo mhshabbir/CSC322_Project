@@ -2,9 +2,8 @@ import React, { useContext } from 'react'
 import { ShopContext } from '../../context/shop-context';
 import { Stack, Button, Box, Paper, TextField, Typography, Container } from '@mui/material';
 
-
 export const DisplayProduct = (props) => {
-const {id, productName, price, productImage, reviews} = props.data;
+const {id, productName, productImage, reviews} = props.data;
 const {addToCart} = useContext(ShopContext);
 const {cartItems} = useContext(ShopContext);
 const cartItemAmount = cartItems[id];
@@ -45,8 +44,8 @@ const DisplayComments = () => {
 return (
 	<Container component="main" sx={{ width: 700, height: 200, mb: 4 }}>
 		<Box textAlign="center">
-			<Box textAlign='center' sx={{ p: 2, border: 2, mb: 5 }}>
-				<img src={productImage} alt="" height="420" width="327"/>
+			<Box textAlign='center'  sx={{ p: 2, border: 2, mb: 5 }}>
+				<img src={productImage} alt="" height="420" width="327" style={{objectFit: "contain"}} />
 
 				<Typography>
 					{productName}

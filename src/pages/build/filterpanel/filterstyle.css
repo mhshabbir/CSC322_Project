@@ -1,0 +1,25 @@
+.suggested-button {
+    height: 40px;
+    margin-right: 2rem;
+    margin-top: 2px;
+    min-width: 11rem;
+    background: white;
+    color: rgb(65, 98, 168);
+    border-radius: 1rem;
+    border: 2px solid rgb(65, 98, 168);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.suggested-list{
+    flex-direction: column;
+    flex: 1;
+}
+button.active {
+    background: rgb(65, 98, 168);
+    color: white;
+}
+
+.p {
+    font-size: 14px;
+}

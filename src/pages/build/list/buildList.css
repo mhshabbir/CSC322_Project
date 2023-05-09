@@ -1,0 +1,62 @@
+.buildPC-product{
+    margin: 0;
+    max-width: 500px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+}
+
+.products-view-build-page{
+    margin: 0;
+    max-width: 500px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+}
+
+.build-Product-Card{
+    background-color: white;
+    border: 1px;
+    border-style: solid;
+    border-color: rgb(65, 98, 168);
+    border-radius: 20px;
+
+}
+
+.build-pc-description{
+    text-align: center;
+}
+
+.build-Product-Card img{
+    height: 300px;
+    width: 250px;
+    object-fit: contain;
+}
+
+.build-Product-Card:hover {
+    transition: 0.3s ease-in;
+    cursor: pointer;
+}
+
+.add-to-bundle {
+    background-color: white;
+    border: 2px solid rgb(65, 98, 168);
+    min-width: 100px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 15px;
+    margin-bottom: 5px;
+}
+
+.add-to-bundle:hover {
+    background-color: rgb(65, 98, 168);
+    color: white;
+    cursor: pointer;
+}
+
+p {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
