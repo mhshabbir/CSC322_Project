@@ -11,26 +11,18 @@ const getDefaultCart = () => {
   return cart;
 };
 
+const getDefaultBundle = () => {
+  let bundle = {};
+  for (let i = 1; i < PRODUCTS.length + 1; i++) {
+    bundle[i] = 0;
+  }
+  return bundle;
+};
+
 export const ShopContextProvider = (props) => {
   const [cartItems, setCartItems] = useState(getDefaultCart());
-  // const [products, setProducts] = useState(PRODUCTS);
+  const [bundleItems, setBundleItems] = useState(getDefaultBundle());
 
-  // const updateProducts = (updatedProducts) => {
-  //   setProducts(updatedProducts);
-  // };
-
-  // const updateProductReviews = (productId, newReview) => {
-  //   setProducts((prev) => {
-  //     const updatedProducts = prev.map((product) => {
-  //       if (product.id === productId) {
-  //         const updatedReviews = [...product.reviews, newReview];
-  //         return { ...product, reviews: updatedReviews };
-  //       }
-  //       return product;
-  //     });
-  //     return updatedProducts;
-  //   });
-  // };
 
   const getTotalCartAmount = () => {
     let totalAmount = 0;
@@ -43,6 +35,23 @@ export const ShopContextProvider = (props) => {
     return totalAmount;
   };
 
+  const getTotalBundleAmount = () => {
+    let totalBundleAmount = 0;
+    for (const item in bundleItems) {
+      if (bundleItems[item] > 0) {
+        let itemInfo = PRODUCTS.find((product) => product.id === Number(item));
+        totalBundleAmount += bundleItems[item] * itemInfo.price;
+      }
+    }
+    return totalBundleAmount;
+  };
+
+  const addToBundle = (itemId) => {
+    setBundleItems((prev) => ({ ...prev, [itemId]: 1}))
+  }
+  const removeFromBundle = (itemId) => {
+    setBundleItems((prev) => ({ ...prev, [itemId]: 0}))
+  }
 
   const addToCart = (itemId) => {
     setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }));
@@ -67,8 +76,12 @@ export const ShopContextProvider = (props) => {
     updateCartItemCount,
     removeFromCart,
     getTotalCartAmount,
-    checkout,
+    checkout
    
+    bundleItems,
+    getTotalBundleAmount,
+    addToBundle,
+    removeFromBundle,
   };
 
   return (

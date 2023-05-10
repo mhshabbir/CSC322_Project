@@ -1,6 +1,7 @@
 import product1 from "./assets/products/1.png";
 import product2 from "./assets/products/2.png";
 import product3 from "./assets/products/3.png";
+import product4 from "./assets/products/9.png";
 
 export const PRODUCTS = [
   {
@@ -8,8 +9,8 @@ export const PRODUCTS = [
     productName: "IPhone",
     price: 999.0,
     productImage: product1,
-    category: "Phone",
-    reviews: ["Great product ID 1"],
+    category: "Motherboard",
+    reviews: "Great product ID 1",
     productlink: "/product/product1",
   },
   {
@@ -26,8 +27,17 @@ export const PRODUCTS = [
     productName: "Cannon M50 Camera",
     price: 699.0,
     productImage: product3,
-    category: "camera",
+    category: "Case",
     reviews: "Good Product ID 3",
     productlink: "/product/product3",
+  },
+  {
+    id: 4,
+    productName: "Dell XPS 15",
+    price: 2400.0,
+    productImage: product4,
+    category: "Motherboard",
+    reviews: "Good Product ID 3",
+    productlink: "/product/product4",
   },
 ];

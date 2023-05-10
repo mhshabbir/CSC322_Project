@@ -1,3 +1,11 @@
+.buildPC-Product-buildpage{ 
+    margin: 0;
+    max-width: 500px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+} 
+
 .build-page{
     display: flex;
     flex-direction: column;
@@ -12,11 +20,21 @@
 }
 
 .filtering-side-panel{
-    flex-basis:280px;
+    flex-basis:180px;
+    margin-left: 2px;
+}
     
 
-}
+
 
 .products-view-build-page{
     flex: 1;
+}
+
+h1{
+    margin-top: 0;
+}
+
+h2{
+    font-size: 18px;
 }

@@ -8,7 +8,10 @@ export const SUGGESTEDCOFIGS = [
         CPU: "",
         Case:"",
         RAM: "",
-    }
+    },
+    rating: 4.5,
+    countFive: 0,
+    countZero: 0,
 },
 {
     id: 2,
@@ -21,10 +24,12 @@ export const SUGGESTEDCOFIGS = [
         RAM: "",
     },
     rating: 4.5,
+    countFive: 0,
+    countZero: 0,
 },
 {
     id: 3,
-    configName:"",
+    configName:"Liz",
     user:"",
     selectedProducts: {
         MB:"",
@@ -33,6 +38,8 @@ export const SUGGESTEDCOFIGS = [
         RAM: "",
     },
     rating: 4.5,
+    countFive: 0,
+    countZero: 0,
 },
 {
     id: 4,
@@ -45,6 +52,8 @@ export const SUGGESTEDCOFIGS = [
         RAM: "",
     },
     rating: 4.5,
+    countFive: 0,
+    countZero: 0,
 },
 {
     id: 5,
@@ -57,5 +66,7 @@ export const SUGGESTEDCOFIGS = [
         RAM: "",
     },
     rating: 4.5,
+    countFive: 0,
+    countZero: 0,   
 },
 ];
