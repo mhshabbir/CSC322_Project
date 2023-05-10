@@ -1,6 +1,8 @@
 
 import React, { useState } from 'react';
 import TextField from '@mui/material/TextField';
+import badWords from 'bad-words'
+
 
 const ChatBox = () => {
   const [messages, setMessages] = useState([]);
@@ -10,12 +12,17 @@ const ChatBox = () => {
     setInputValue(e.target.value);
   };
 
+  const filter = new badWords();
   const handleFormSubmit = (e) => {
+
     e.preventDefault();
+    const filteredMessage = filter.clean(inputValue);
+    
+
     setMessages([
       ...messages,
-      { user: "me", message: inputValue },
-      { user: "bot", message: `You said: ${inputValue}` }
+      { user: "me", message: filteredMessage },
+      { user: "bot", message: `You said: ${filteredMessage}` }
     ]);
     setInputValue("");
   };

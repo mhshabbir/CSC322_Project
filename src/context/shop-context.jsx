@@ -19,15 +19,10 @@ const getDefaultBundle = () => {
   return bundle;
 };
 
-// const correctcomment = () => {
-//   foolarray = ["fuck", "hell", "damn it"];
-//   let splited_comment = comment_var.split();
-
-// }
-
 export const ShopContextProvider = (props) => {
   const [cartItems, setCartItems] = useState(getDefaultCart());
   const [bundleItems, setBundleItems] = useState(getDefaultBundle());
+
 
   const getTotalCartAmount = () => {
     let totalAmount = 0;
@@ -81,7 +76,8 @@ export const ShopContextProvider = (props) => {
     updateCartItemCount,
     removeFromCart,
     getTotalCartAmount,
-    checkout,
+    checkout
+   
     bundleItems,
     getTotalBundleAmount,
     addToBundle,
