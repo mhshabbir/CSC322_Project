@@ -1,6 +1,6 @@
 import React from 'react'
 import { PRODUCTS } from '../../../products'
-import { BuildProduct } from './buildProductList'
+import { BuildProduct } from './buildProuctList'
 import "./buildList.css"
 
 export const BuildList = () => {
