@@ -9,7 +9,7 @@ export const PRODUCTS = [
     price: 999.0,
     productImage: product1,
     category: "Phone",
-    reviews: "Great product ID 1",
+    reviews: ["Great product ID 1"],
     productlink: "/product/product1",
   },
   {
@@ -18,7 +18,7 @@ export const PRODUCTS = [
     price: 1999.0,
     productImage: product2,
     category: "laptop",
-    reviews: ["Great product id 2","jasdklfjklsajdflkj","sdjaflkjlkjlkjasdlkjlkjsdf"],
+    reviews: ["Great product id 2","cool","nice"],
     productlink: "/product/product2",
   },
   {

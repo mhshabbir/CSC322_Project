@@ -13,6 +13,24 @@ const getDefaultCart = () => {
 
 export const ShopContextProvider = (props) => {
   const [cartItems, setCartItems] = useState(getDefaultCart());
+  // const [products, setProducts] = useState(PRODUCTS);
+
+  // const updateProducts = (updatedProducts) => {
+  //   setProducts(updatedProducts);
+  // };
+
+  // const updateProductReviews = (productId, newReview) => {
+  //   setProducts((prev) => {
+  //     const updatedProducts = prev.map((product) => {
+  //       if (product.id === productId) {
+  //         const updatedReviews = [...product.reviews, newReview];
+  //         return { ...product, reviews: updatedReviews };
+  //       }
+  //       return product;
+  //     });
+  //     return updatedProducts;
+  //   });
+  // };
 
   const getTotalCartAmount = () => {
     let totalAmount = 0;
@@ -24,6 +42,7 @@ export const ShopContextProvider = (props) => {
     }
     return totalAmount;
   };
+
 
   const addToCart = (itemId) => {
     setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }));
@@ -49,6 +68,7 @@ export const ShopContextProvider = (props) => {
     removeFromCart,
     getTotalCartAmount,
     checkout,
+   
   };
 
   return (
