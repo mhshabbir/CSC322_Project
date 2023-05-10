@@ -30,11 +30,13 @@ export const Build = () => {
                 <h1>Your Bundle Items</h1>
               </div>
               <div className='buildPC-Product-buildpage'>
+
                   {PRODUCTS.map((product) => {
                     if (bundleItems[product.id] !== 0) {
                       return <BundleItem data ={product}/>;
                     }
                   })}
+
               </div>
             <BuildList />
           </div>

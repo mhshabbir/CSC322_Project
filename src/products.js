@@ -38,7 +38,7 @@ export const PRODUCTS = [
     productName: "Dell XPS 15",
     price: 2400.0,
     productImage: product4,
-    category: "Laptop",
+    category: "Motherboard",
     reviews: "Good Product ID 3",
     productlink: "/product/product4",
   },
