@@ -19,11 +19,6 @@ const getDefaultBundle = () => {
   return bundle;
 };
 
-// const correctcomment = () => {
-//   foolarray = ["fuck", "hell", "damn it"];
-//   let splited_comment = comment_var.split();
-
-// }
 
 export const ShopContextProvider = (props) => {
   const [cartItems, setCartItems] = useState(getDefaultCart());

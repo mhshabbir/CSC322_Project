@@ -5,6 +5,14 @@
     align-items: center;
   }
   
+  .buildPC-Product-cartpage {
+    margin: 0;
+    max-width: 1002px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+}
+
   .cartItem {
     width: 700px;
     height: 250px;

@@ -25,19 +25,24 @@ export const Build = () => {
             <Filterpanel />
           </div>
           {/* List view & emptyView */}
+
           <div className='products-view-build-page'>
+            {totalBundleAmount > 0 ? (
+              <div>
               <div>
                 <h1>Your Bundle Items</h1>
               </div>
               <div className='buildPC-Product-buildpage'>
-
                   {PRODUCTS.map((product) => {
                     if (bundleItems[product.id] !== 0) {
                       return <BundleItem data ={product}/>;
                     }
                   })}
-
               </div>
+              </div>
+              ) : (
+                <h1>Your Bundle is Empty</h1>
+              )}
             <BuildList />
           </div>
         </div>
