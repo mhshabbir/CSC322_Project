@@ -19,6 +19,7 @@ const getDefaultBundle = () => {
   return bundle;
 };
 
+
 export const ShopContextProvider = (props) => {
   const [cartItems, setCartItems] = useState(getDefaultCart());
   const [bundleItems, setBundleItems] = useState(getDefaultBundle());
