@@ -137,7 +137,7 @@ def create_app():
     @app.route('/api/products')
     def get_products():
         products = Product.query.all()
-        print(products)
+        #print(products)
         return jsonify({'products': [p.__repr__() for p in products]})
     a=get_products()
 
