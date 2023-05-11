@@ -18,10 +18,8 @@ export const PRODUCTS = [
     productName: "Macbook Pro 2022 (M1)",
     price: 1999.0,
     productImage: product2,
-
-    category: "CPU",
-    reviews: ["Great product id 2","jasdklfjklsajdflkj","sdjaflkjlkjlkjasdlkjlkjsdf"],
-
+    category: "laptop",
+    reviews: ["Great product id 2","cool","nice"],
     productlink: "/product/product2",
   },
   {
