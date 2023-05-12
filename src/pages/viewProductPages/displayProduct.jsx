@@ -96,3 +96,4 @@ export const DisplayProduct = (props) => {
     </Container>
   )
 };
+

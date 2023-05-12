@@ -10,7 +10,7 @@ export const PRODUCTS = [
     price: 999.0,
     productImage: product1,
     category: "Motherboard",
-    reviews: "Great product ID 1",
+    reviews: ["Great product ID 1"],
     productlink: "/product/product1",
   },
   {
