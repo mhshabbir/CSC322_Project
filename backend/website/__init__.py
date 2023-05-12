@@ -139,7 +139,7 @@ def create_app():
         products = Product.query.all()
         #print(products)
         return jsonify({'products': [p.__repr__() for p in products]})
-    a=get_products()
+    
 
     
     return app

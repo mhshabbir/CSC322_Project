@@ -23,6 +23,7 @@ const getDefaultBundle = () => {
 export const ShopContextProvider = (props) => {
   const [cartItems, setCartItems] = useState(getDefaultCart());
   const [bundleItems, setBundleItems] = useState(getDefaultBundle());
+  const [currentcat, setcurrentcat] = useState([""]);
 
 
   const getTotalCartAmount = () => {
@@ -46,6 +47,25 @@ export const ShopContextProvider = (props) => {
     }
     return totalBundleAmount;
   };
+
+  // const setSuggestBundle = () => {
+
+  //   // setBundleItems((prev) => ({ ...prev, [itemId]: 1}))
+  // };
+
+  const addBundleCategory = (category) => {
+    setcurrentcat([...currentcat,category])
+  }
+
+  const removeBundleCategory = (category) => {
+    const filteredArray = currentcat.filter((value) => value !== category);
+    setcurrentcat(filteredArray);
+  }
+
+  const resetBundleItem = () => {
+    setcurrentcat([""])
+  }
+
 
   const addToBundle = (itemId) => {
     setBundleItems((prev) => ({ ...prev, [itemId]: 1}))
@@ -72,17 +92,21 @@ export const ShopContextProvider = (props) => {
 
 
   const contextValue = {
+    getDefaultBundle,
     cartItems,
     addToCart,
     updateCartItemCount,
     removeFromCart,
     getTotalCartAmount,
-    checkout
-   
+    checkout,
     bundleItems,
     getTotalBundleAmount,
     addToBundle,
     removeFromBundle,
+    addBundleCategory,
+    currentcat,
+    removeBundleCategory,
+    resetBundleItem,
   };
 
   return (

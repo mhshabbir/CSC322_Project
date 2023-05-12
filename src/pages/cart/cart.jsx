@@ -12,6 +12,8 @@ export const Cart = () => {
     const { cartItems, getTotalCartAmount } = useContext(ShopContext)
     const { bundleItems, getTotalBundleAmount } = useContext(ShopContext)
     const totalAmount = getTotalCartAmount()
+    const totalBundleAmount = getTotalBundleAmount()
+    const totalAllProducts = totalAmount + totalBundleAmount;
 
   const navigate = useNavigate()
   return (
@@ -26,25 +28,37 @@ export const Cart = () => {
             }
           })}
       </div>
-      <div classname="products-view-build-page">
-        <h1>Your Bundle Iteams</h1>
-      </div>
-      <div className='buildPC-Product-cartpage'>
-          {PRODUCTS.map((product) => {
-            if (bundleItems[product.id] !== 0) {
-              return <BundleItem data ={product}/>;
-            }
-          })}
-      </div>
 
-      {totalAmount > 0 ? (
+      {totalBundleAmount > 0 ? (
+        <div>
+              <div classname="products-view-build-page">
+              <h1>Your Bundle Iteams</h1>
+            </div>
+            <div className='buildPC-Product-cartpage'>
+                {PRODUCTS.map((product) => {
+                  if (bundleItems[product.id] !== 0) {
+                    return <BundleItem data ={product}/>;
+                  }
+                })}
+            </div>
+            </div>
+      ) :(
+        <h1>Your Bundle is Empty</h1>
+      )}
+
+
+      {totalAmount > 0 || totalBundleAmount > 0 ? (
       <div className='checkout'>
-        
-        <p>
-          <b>Single Product Subtotal: ${totalAmount}</b>
-        </p>
+        <div >
+            <p className='check-total'>
+              <b>Single Product Subtotal: ${totalAmount}</b>
+              <b>Bundled Products Subtotal: ${totalBundleAmount}</b> 
+              <b className='total-amount'> Total Amount: ${totalAllProducts}</b>
+            </p>
+        </div>
         <button onClick={() => navigate("/")}>Continue Shopping</button>
         <button>Checkout</button>
+        <button>Add to Suggestions</button>
       </div>
       ) : (
         <h1> Your Cart is Empty</h1>

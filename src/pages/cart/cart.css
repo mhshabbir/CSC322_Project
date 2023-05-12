@@ -13,11 +13,14 @@
     gap: 20px;
 }
 
+.products-view-build-page{
+  text-align: center;
+}
+
   .cartItem {
     width: 700px;
     height: 250px;
     display: flex;
-  
     align-items: center;
     box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
     border-radius: 25px;
@@ -28,11 +31,21 @@
     width: 200px;
   }
   
-  .cartItem .description {
-    margin-top: 200px;
+  .cartItem .description  {
     width: 100%;
     font-size: 30px;
   }
+
+  .description {
+    margin-left: 20px;
+  }
+
+  
+
+.checkout {
+  font-size: 25px;
+  text-align: center;
+}
   
   .countHandler input {
     width: 40px;
