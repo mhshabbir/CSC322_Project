@@ -83,24 +83,27 @@ export const SignUp = () => {
                         placeholder="********" 
                     />
 
-                    <Button
-                        type="submit"
-                        variant="contained" 
-                        href="/SignUp" 
-                        size="medium" 
-                        style={{ 
-                            backgroundColor: 'black', 
-                            color: 'white' , 
-                            width:'200px',  
-                            borderRadius: '30px',
-                        }}
-                    > 
-                        Register
-                    </Button>
+                    <Box mt={1}>
+                        <Button
+                            type="submit"
+                            variant="contained" 
+                            href="/SignUp" 
+                            size="medium" 
+                            style={{ 
+                                backgroundColor: 'black', 
+                                color: 'white' , 
+                                width:'200px',  
+                                borderRadius: '30px',
+                            }}
+                        > 
+                            Register
+                        </Button>
+                    </Box>
+                    
 
-                    <Grid container>
+                    <Grid mt={1} container>
                         <Grid item>
-                            <Link href="/Login" variant="body2">
+                            <Link href="/login" variant="body2">
                                 {"Already have an account? Sign in"}
                             </Link>
                         </Grid>

@@ -1,5 +1,4 @@
-
-import React, { useContext, useState , useEffect} from 'react'
+import React, { useContext, useState } from 'react'
 import { ShopContext } from '../../context/shop-context';
 import { Stack, Button, Box, Paper, TextField, Typography, Container } from '@mui/material';
 import { PRODUCTS } from '../../products';
@@ -22,7 +21,7 @@ export const DisplayProduct = (props) => {
 
     reviews.push(newComment)
     console.log(reviews);
-     e.target.reset();
+    e.target.reset();
   };
 
   console.log(reviews);
@@ -49,8 +48,11 @@ export const DisplayProduct = (props) => {
       <Box textAlign="center">
         <Box textAlign='center' sx={{ p: 2, border: 2, mb: 5 }}>
           <img src={productImage} alt="" height="420" width="327"/>
-          <Typography>
+          <Typography sx={{ fontSize: 32 ,fontWeight: 'bold' }}>
             {productName}
+          </Typography>
+          <Typography sx={{ fontSize: 36 }}>
+            ${price}
           </Typography>
           <Button 
             style={{ 
