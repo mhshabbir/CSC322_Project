@@ -3,8 +3,8 @@ from flask_sqlalchemy import SQLAlchemy
 import os
 from os import path
 from flask_login import LoginManager
-from flask import jsonify
-
+from flask import jsonify,request,session
+from flask_login import login_user, login_required, logout_user, current_user
 db = SQLAlchemy()
 DB_NAME = "database.db"
 from flask_login import UserMixin
@@ -138,7 +138,30 @@ def create_app():
     def get_products():
             products = Product.query.all()
             return jsonify({'products': [p.__repr__() for p in products]})
-    
+    @app.route('/login', methods=['GET', 'POST'])
+    def Login():
+        username = request.form['email']
+        password = request.form['password']
+        account = request.form['account']
+        if account=='Owner':
+          user=Owner.query.filter_by(username=username).first()
+          session_key='owner_id'
+        elif account=='Employee':
+            user=Employee.query.filter_by(username=username).first()
+            session_key='employee_id'
+        elif account=='Customer':
+            user=Customer.query.filter_by(username=username).first()
+            session_key='customer_id'
+
+        if user:
+            if user.password== password: 
+                session[session_key] = user.id
+                return jsonify({'success': True}), 200
+            else:
+                return jsonify({'status': 'error', 'message': 'Incorrect Password '})
+        else:
+             return jsonify({'status': 'error', 'message': 'Email does not exist.'}),401
+
 
     
     return app
