@@ -3,8 +3,8 @@ from flask_sqlalchemy import SQLAlchemy
 import os
 from os import path
 from flask_login import LoginManager
-from flask import jsonify
-
+from flask import jsonify,request,session
+from flask_login import login_user, login_required, logout_user, current_user
 db = SQLAlchemy()
 DB_NAME = "database.db"
 from flask_login import UserMixin
@@ -136,9 +136,11 @@ def create_app():
     ###-----------database is ready ------------   
     @app.route('/api/products')
     def get_products():
+
         products = Product.query.all()
         #print(products)
         return jsonify({'products': [p.__repr__() for p in products]})
+
 
 
     

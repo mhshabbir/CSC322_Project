@@ -9,6 +9,9 @@ export const Login = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log(email, password, account);
+        setEmail("")
+        setPassword("")
+        setAccount("")
     }
 
     return (
@@ -62,7 +65,7 @@ export const Login = () => {
                         onChange={e => setPassword(e.target.value)}
                     />
 
-                    <FormControl fullWidth>
+                    <FormControl fullWidth sx={{ mt: 2, mb:2}}>
                         <InputLabel id="account-type-label">Select Account Type</InputLabel>
                         <Select
                             labelId="account-type-label"
@@ -70,12 +73,14 @@ export const Login = () => {
                             label="Select Account Type"
                             value={account}
                             onChange={e => setAccount(e.target.value)}
+                            sx={{ height: 60 }}
                         >
                             <MenuItem value={"Owner"}>Owner</MenuItem>
                             <MenuItem value={"Employee"}>Employee</MenuItem>
                             <MenuItem value={"Customer"}>Customer</MenuItem>
                         </Select>
                     </FormControl>
+                    
                     <Button
                         type="submit"
                         variant="contained" 
@@ -84,15 +89,15 @@ export const Login = () => {
                             backgroundColor: 'black', 
                             color: 'white' , 
                             width:'200px',  
-                            borderRadius: '30px'
+                            borderRadius: '30px',
                         }}
                     > 
                         Login
                     </Button>
 
-                    <Grid container>
+                    <Grid mt={2} container>
                         <Grid item>
-                            <Link href="/SignUp" variant="body2">
+                            <Link href="/signup" variant="body2">
                                 {"Don't have an account? Sign-up"}
                             </Link>
                         </Grid>
