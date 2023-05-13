@@ -8,7 +8,7 @@ import "./filterstyle.css"
 
 export const Filterpanel = () => {
 
-  const {resetBundleItem} = useContext(ShopContext);
+  const {resetBundleItem,setBundleThroughSuggestions} = useContext(ShopContext);
 
   return (
     <div>
@@ -19,7 +19,7 @@ export const Filterpanel = () => {
         <div className='suggested-list'>
         <button className='suggested-button' onClick={ () => resetBundleItem()} >Create My Own</button>
           {SUGGESTEDCOFIGS.map((Suggested) => (
-            <button className='suggested-button' ><SuggestedConfig data = {Suggested} /></button>
+            <SuggestedConfig data = {Suggested} />
           ))}
         </div>
       </div>

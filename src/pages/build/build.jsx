@@ -11,7 +11,7 @@ import './build.css';
 
 
 export const Build = () => {
-  const { bundleItems, getTotalBundleAmount } = useContext(ShopContext)
+  const { bundleItems, getTotalBundleAmount, suggestionRating } = useContext(ShopContext)
   const totalBundleAmount = getTotalBundleAmount()
 
   return (
@@ -31,6 +31,7 @@ export const Build = () => {
               <div>
               <div>
                 <h1>Your Bundle Items</h1>
+                <h1>Hello{suggestionRating}</h1>
               </div>
               <div className='buildPC-Product-buildpage'>
                   {PRODUCTS.map((product) => {

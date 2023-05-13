@@ -10,15 +10,25 @@ export const BuildList = () => {
 
   const {currentcat} = useContext(ShopContext);
   const currentCategoryList = currentcat;
-  
+  const currentCatLength = currentcat.length;
   const checkCurrent = (catogoryName) => {
     if (currentCategoryList.includes(catogoryName)) {
       return true;
     } 
   };
 
+  if (checkCurrent("Motherboard") && checkCurrent("CPU") && checkCurrent("Case")) {
+    return (
+      <div>
+        <h1>Your Bundle is full</h1>
+      </div>
+    );
+  }
+
+
   return (
 
+  
     <div className="BuildListpage">
       <div className="buildListHeader">
         <h1><b>List</b></h1>
@@ -80,5 +90,5 @@ export const BuildList = () => {
     </div>
   )} 
   </div>
-  )
-}
+);
+};

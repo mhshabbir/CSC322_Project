@@ -10,13 +10,11 @@ export const BundleItem = (props) => {
     const {addBundleCategory, removeBundleCategory} = useContext(ShopContext);
     const bundleAmount = bundleItems[id];
 
-    const handleAddToBundleClick = () => {
+  const handleAddToBundleClick = () => {
       addToBundle(id)
       addBundleCategory(category)
-      
     }
 
-    
   const handleRemoveFromBundleClick = () => {
     removeFromBundle(id)
     removeBundleCategory(category)
@@ -34,7 +32,7 @@ export const BundleItem = (props) => {
         </p>
         <p>${price}</p>
         <p>Bundle {bundleAmount}</p>
-        <button className='add-to-bundle' onClick={ () => handleAddToBundleClick() }>Add to Bundle</button>
+        <button className='add-to-bundle' onClick={ () => handleAddToBundleClick()}>Add to Bundle</button>
         <button className='add-to-bundle' onClick={ () => handleRemoveFromBundleClick()}>Remove From Bundle</button>
         </div>
     </div>

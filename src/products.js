@@ -18,7 +18,7 @@ export const PRODUCTS = [
     productName: "Macbook Pro 2022 (M1)",
     price: 1999.0,
     productImage: "https://c1.neweggimages.com/ProductImage/34-156-153-V07.jpg",
-    category: "laptop",
+    category: "CPU",
     reviews: ["Great product id 2","cool","nice"],
     productlink: "/product/product2",
   },
